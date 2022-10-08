@@ -8,15 +8,15 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 12, name: 'Dr. Nice' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr. IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 12, name: 'Dr. Nice', points: 1 },
+      { id: 13, name: 'Bombasto', points: 2 },
+      { id: 14, name: 'Celeritas', points: 3 },
+      { id: 15, name: 'Magneta', points: 4 },
+      { id: 16, name: 'RubberMan', points: 5 },
+      { id: 17, name: 'Dynama', points: 6 },
+      { id: 18, name: 'Dr. IQ', points: 7 },
+      { id: 19, name: 'Magma', points: 8 },
+      { id: 20, name: 'Tornado', points: 9 }
     ];
     return {heroes};
   }

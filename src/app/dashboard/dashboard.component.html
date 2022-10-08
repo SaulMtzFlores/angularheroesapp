@@ -2,7 +2,7 @@
 <div class="heroes-menu">
   <a *ngFor="let hero of heroes"
       routerLink="/detail/{{hero.id}}">
-      {{hero.name}}
+      {{hero.name}} <span style="color: rgb(233, 201, 25);">({{hero.points}})</span>
   </a>
 </div>
 

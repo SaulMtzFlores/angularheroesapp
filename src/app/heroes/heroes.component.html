@@ -4,8 +4,11 @@
   <label for="new-hero">Hero name: </label>
   <input id="new-hero" #heroName />
 
+  <label for="new-hero">Hero points:</label>
+  <input id="new-hero" type="number" #heroPoints />
+
   <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button type="button" class="add-button" (click)="add(heroName.value, heroPoints.value); heroName.value=''; heroPoints.value=''">
     Add hero
   </button>
 </div>
@@ -13,7 +16,7 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
+      <span class="badge">{{hero.id}}</span> {{hero.name}} <span style="color:rgba(75, 158, 194, 0.898);">({{hero.points}})</span>
     </a>
     <button type="button" class="delete" title="delete hero"
       (click)="delete(hero)">x</button>
